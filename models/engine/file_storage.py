@@ -60,4 +60,5 @@ class FileStorage:
         """Deletes object from storage dictionary"""
         if opj is not None:
             k = opj.__class__.__name__+'.'+opj.id
-            del FileStorage.__objects[k]
+            if k in FileStorage.__objects:
+                del FileStorage.__objects[k]
