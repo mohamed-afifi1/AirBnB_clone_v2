@@ -28,8 +28,9 @@ def c_is(text):
 
 
 @app.route("/python/<text>", strict_slashes=False)
+@app.route("/python", strict_slashes=False)
 def python_is(text="is cool"):
-    """return c and text given in route"""
+    """return python and text given in route"""
     text = text.replace('_', ' ')
     return 'Python ' + text
 
